@@ -71,4 +71,39 @@
             }
         }
     }
+    public class CombSort : SortingAlgorithm
+    {
+        public void sort(int[] array)
+        {
+            int arrayLength = array.Length;
+            for(int gap = arrayLength - 1; gap > 0; gap--)
+            {
+                for(int i = 0; i + gap < arrayLength; i++)
+                {
+                    if(array[i] > array[i + gap])
+                    {
+                        switchPlaces(array, i, i +gap);
+                    }
+                }
+            }
+        }
+    }
+    public class SelectionSort : SortingAlgorithm
+    {
+        public void sort(int[] array)
+        {
+            //This is a work in progress
+            int arrayLength = array.Length;
+            for(int sorted = 0; sorted < arrayLength; sorted++)
+            {
+                for(int i = sorted; i < arrayLength; i++)
+                {
+                    if(array[i] < (int)min)
+                    {
+
+                    }
+                }
+            }
+        }
+    }
 }
