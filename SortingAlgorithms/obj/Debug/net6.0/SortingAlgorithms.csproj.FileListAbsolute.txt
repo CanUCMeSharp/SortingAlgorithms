@@ -1,0 +1,12 @@
+C:\Users\tomlo\Programming\SortingAlgorithms\SortingAlgorithms\bin\Debug\net6.0\SortingAlgorithms.deps.json
+C:\Users\tomlo\Programming\SortingAlgorithms\SortingAlgorithms\bin\Debug\net6.0\SortingAlgorithms.dll
+C:\Users\tomlo\Programming\SortingAlgorithms\SortingAlgorithms\bin\Debug\net6.0\SortingAlgorithms.pdb
+C:\Users\tomlo\Programming\SortingAlgorithms\SortingAlgorithms\obj\Debug\net6.0\SortingAlgorithms.csproj.AssemblyReference.cache
+C:\Users\tomlo\Programming\SortingAlgorithms\SortingAlgorithms\obj\Debug\net6.0\SortingAlgorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tomlo\Programming\SortingAlgorithms\SortingAlgorithms\obj\Debug\net6.0\SortingAlgorithms.AssemblyInfoInputs.cache
+C:\Users\tomlo\Programming\SortingAlgorithms\SortingAlgorithms\obj\Debug\net6.0\SortingAlgorithms.AssemblyInfo.cs
+C:\Users\tomlo\Programming\SortingAlgorithms\SortingAlgorithms\obj\Debug\net6.0\SortingAlgorithms.csproj.CoreCompileInputs.cache
+C:\Users\tomlo\Programming\SortingAlgorithms\SortingAlgorithms\obj\Debug\net6.0\SortingAlgorithms.dll
+C:\Users\tomlo\Programming\SortingAlgorithms\SortingAlgorithms\obj\Debug\net6.0\refint\SortingAlgorithms.dll
+C:\Users\tomlo\Programming\SortingAlgorithms\SortingAlgorithms\obj\Debug\net6.0\SortingAlgorithms.pdb
+C:\Users\tomlo\Programming\SortingAlgorithms\SortingAlgorithms\obj\Debug\net6.0\ref\SortingAlgorithms.dll
