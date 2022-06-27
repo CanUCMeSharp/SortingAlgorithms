@@ -92,17 +92,21 @@
     {
         public void sort(int[] array)
         {
-            //This is a work in progress
-            int arrayLength = array.Length;
-            for(int sorted = 0; sorted < arrayLength; sorted++)
+            int minvalue = int.MaxValue;
+            int minPos = 0;
+            for(int sorted = 0; sorted < array.Length; sorted++)
             {
-                for(int i = sorted; i < arrayLength; i++)
+                for(int i = sorted; i < array.Length; i++)
                 {
-                    if(array[i] < (int)min)
+                    if(minvalue >= array[i])
                     {
-
+                        minvalue = array[i];
+                        minPos = i;
                     }
                 }
+                switchPlaces(array, sorted, minPos);
+                minvalue = int.MaxValue;
+                minPos = 0;
             }
         }
     }

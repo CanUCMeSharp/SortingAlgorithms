@@ -9,7 +9,7 @@ namespace SortingAlgorithms
         public static void Main(string[] args)
         {
             Test test = new Test();
-            test.test(10);
+            test.test(25000);
         }
     }
     public class Test
