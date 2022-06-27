@@ -204,4 +204,39 @@
             }
         }
     }
+    public class HeapSort : SortingAlgorithm
+    {
+        public void sort(int[] array)
+        {
+            int n = array.Length;
+            for(int i = n / 2 - 1; i >= 0; i--)
+            {
+                heapify(array, n, i);
+            }
+            for(int i = n - 1; i > 0; i--)
+            {
+                swap(array, 0, i);
+                heapify(array, i, 0);
+            }
+        }
+        private void heapify(int[] array, int n, int i)
+        {
+            int largest = i;
+            int l = 2 * i + 1;
+            int r = 2 * l + 2;
+            if(l < n && array[l] > array[largest])
+            {
+                largest = l;
+            }
+            if(r < n && array[r] > array[largest])
+            {
+                largest = r;
+            }
+            if(largest != i)
+            {
+                swap(array, largest, i);
+            }
+            heapify(array, n, largest);
+        }
+    }
 }

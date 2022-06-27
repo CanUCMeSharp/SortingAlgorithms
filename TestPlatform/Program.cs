@@ -20,6 +20,7 @@ namespace SortingAlgorithms
         SelectionSort selectionSort = new SelectionSort();
         QuickSort quickSort = new QuickSort();
         MergeSort mergeSort = new MergeSort();
+        HeapSort heapSort = new HeapSort();
         Random random = new Random();
 
         public void test(int length)
@@ -123,6 +124,24 @@ namespace SortingAlgorithms
             Console.WriteLine("This is the test of the " + mergeSort.ToString());
             stopwatch.Start();
             mergeSort.sort(b);
+            stopwatch.Stop();
+            if (isSorted(b))
+            {
+                Console.WriteLine("The sort worked successfully");
+                Console.WriteLine(stopwatch.Elapsed.ToString());
+            }
+            else
+            {
+                Console.WriteLine("An Error occurred:");
+                printArray(b);
+            }
+            Console.WriteLine();
+            stopwatch.Reset();
+
+            b = a;
+            Console.WriteLine("This is the test of the " + heapSort.ToString());
+            stopwatch.Start();
+            heapSort.sort(b);
             stopwatch.Stop();
             if (isSorted(b))
             {
