@@ -9,7 +9,7 @@ namespace SortingAlgorithms
         public static void Main(string[] args)
         {
             Test test = new Test();
-            test.test(25000);
+            test.test(10000);
         }
     }
     public class Test
@@ -19,19 +19,21 @@ namespace SortingAlgorithms
         CombSort combSort = new CombSort();
         SelectionSort selectionSort = new SelectionSort();
         QuickSort quickSort = new QuickSort();
+        MergeSort mergeSort = new MergeSort();
         Random random = new Random();
 
         public void test(int length)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
             int[] a = new int[length];
-
             shuffle(a);
+
+            int[] b = a;
             Console.WriteLine("This is the test of the " + bubbleSort.ToString());
             stopwatch.Start();
-            bubbleSort.sort(a);
+            bubbleSort.sort(b);
             stopwatch.Stop();
-            if (isSorted(a))
+            if (isSorted(b))
             {
                 Console.WriteLine("The sort worked successfully");
                 Console.WriteLine(stopwatch.Elapsed.ToString());
@@ -39,17 +41,17 @@ namespace SortingAlgorithms
             else
             {
                 Console.WriteLine("An Error occurred:");
-                printArray(a);
+                printArray(b);
             }
             Console.WriteLine();
             stopwatch.Reset();
 
-            shuffle(a);
+            b = a;
             Console.WriteLine("This is the test of the " + gnomeSort.ToString());
             stopwatch.Start();
-            gnomeSort.sort(a);
+            gnomeSort.sort(b);
             stopwatch.Stop();
-            if (isSorted(a))
+            if (isSorted(b))
             {
                 Console.WriteLine("The sort worked successfully");
                 Console.WriteLine(stopwatch.Elapsed.ToString());
@@ -57,17 +59,17 @@ namespace SortingAlgorithms
             else
             {
                 Console.WriteLine("An Error occurred:");
-                printArray(a);
+                printArray(b);
             }
             Console.WriteLine();
             stopwatch.Reset();
 
-            shuffle(a);
+            b = a;
             Console.WriteLine("This is the test of the " + combSort.ToString());
             stopwatch.Start();
-            combSort.sort(a);
+            combSort.sort(b);
             stopwatch.Stop();
-            if (isSorted(a))
+            if (isSorted(b))
             {
                 Console.WriteLine("The sort worked successfully");
                 Console.WriteLine(stopwatch.Elapsed.ToString());
@@ -75,17 +77,17 @@ namespace SortingAlgorithms
             else
             {
                 Console.WriteLine("An Error occurred:");
-                printArray(a);
+                printArray(b);
             }
             Console.WriteLine();
             stopwatch.Reset();
 
-            shuffle(a);
+            b = a;
             Console.WriteLine("This is the test of the " + selectionSort.ToString());
             stopwatch.Start();
-            selectionSort.sort(a);
+            selectionSort.sort(b);
             stopwatch.Stop();
-            if (isSorted(a))
+            if (isSorted(b))
             {
                 Console.WriteLine("The sort worked successfully");
                 Console.WriteLine(stopwatch.Elapsed.ToString());
@@ -93,18 +95,18 @@ namespace SortingAlgorithms
             else
             {
                 Console.WriteLine("An Error occurred:");
-                printArray(a);
+                printArray(b);
             }
             Console.WriteLine();
             stopwatch.Reset();
 
 
-            shuffle(a);
+            b = a;
             Console.WriteLine("This is the test of the " + quickSort.ToString());
             stopwatch.Start();
-            quickSort.sort(a);
+            quickSort.sort(b);
             stopwatch.Stop();
-            if (isSorted(a))
+            if (isSorted(b))
             {
                 Console.WriteLine("The sort worked successfully");
                 Console.WriteLine(stopwatch.Elapsed.ToString());
@@ -112,7 +114,25 @@ namespace SortingAlgorithms
             else
             {
                 Console.WriteLine("An Error occurred:");
-                printArray(a);
+                printArray(b);
+            }
+            Console.WriteLine();
+            stopwatch.Reset();
+
+            b = a;
+            Console.WriteLine("This is the test of the " + mergeSort.ToString());
+            stopwatch.Start();
+            mergeSort.sort(b);
+            stopwatch.Stop();
+            if (isSorted(b))
+            {
+                Console.WriteLine("The sort worked successfully");
+                Console.WriteLine(stopwatch.Elapsed.ToString());
+            }
+            else
+            {
+                Console.WriteLine("An Error occurred:");
+                printArray(b);
             }
             Console.WriteLine();
             stopwatch.Reset();
