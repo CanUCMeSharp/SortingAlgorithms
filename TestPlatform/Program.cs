@@ -18,6 +18,7 @@ namespace SortingAlgorithms
         GnomeSort gnomeSort = new GnomeSort();
         CombSort combSort = new CombSort();
         SelectionSort selectionSort = new SelectionSort();
+        QuickSort quickSort = new QuickSort();
         Random random = new Random();
 
         public void test(int length)
@@ -83,6 +84,25 @@ namespace SortingAlgorithms
             Console.WriteLine("This is the test of the " + selectionSort.ToString());
             stopwatch.Start();
             selectionSort.sort(a);
+            stopwatch.Stop();
+            if (isSorted(a))
+            {
+                Console.WriteLine("The sort worked successfully");
+                Console.WriteLine(stopwatch.Elapsed.ToString());
+            }
+            else
+            {
+                Console.WriteLine("An Error occurred:");
+                printArray(a);
+            }
+            Console.WriteLine();
+            stopwatch.Reset();
+
+
+            shuffle(a);
+            Console.WriteLine("This is the test of the " + quickSort.ToString());
+            stopwatch.Start();
+            quickSort.sort(a);
             stopwatch.Stop();
             if (isSorted(a))
             {

@@ -22,7 +22,7 @@
             }
             return true;
         }
-        public void switchPlaces(int[] array, int posA, int posB)
+        public void swap(int[] array, int posA, int posB)
         {
             int temp = array[posA];
             array[posA] = array[posB];
@@ -39,7 +39,7 @@
                 {
                     if(array[i] > array[(i + 1)])
                     {
-                        switchPlaces(array, i, i + 1);
+                        swap(array, i, i + 1);
                     }
                 }
             }
@@ -54,7 +54,7 @@
             {
                 if(array[i] > array[i + 1])
                 {
-                    switchPlaces(array, i, i + 1);
+                    swap(array, i, i + 1);
                     if(i > 0)
                     {
                         i--;
@@ -82,7 +82,7 @@
                 {
                     if(array[i] > array[i + gap])
                     {
-                        switchPlaces(array, i, i +gap);
+                        swap(array, i, i +gap);
                     }
                 }
             }
@@ -104,10 +104,42 @@
                         minPos = i;
                     }
                 }
-                switchPlaces(array, sorted, minPos);
+                swap(array, sorted, minPos);
                 minvalue = int.MaxValue;
                 minPos = 0;
             }
+        }
+    }
+    public class QuickSort : SortingAlgorithm
+    {
+        public void sort(int[] array)
+        {
+            quickSort(array, 0, array.Length - 1);
+        }
+        private void quickSort(int[] array, int low, int high)
+        {
+            if(low < high)
+            {
+                int pi = partition(array, low, high);
+                quickSort(array, low, pi - 1);
+                quickSort(array, pi + 1, high);
+            }
+        }
+        private int partition(int[] array, int low, int high)
+        {
+            int pivot = array[high];
+            int i = (low - 1);
+
+            for (int j = low; j <= high - 1; j++)
+            {
+                if (array[j] < pivot)
+                {
+                    i++;
+                    swap(array, i, j);
+                }
+            }
+            swap(array, i + 1, high);
+            return (i + 1);
         }
     }
 }
